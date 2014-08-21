@@ -5,5 +5,8 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
+	<!-- 自动扫描dao和service包(自动注入) -->
+	<context:component-scan base-package="me.longgen.web.base.business.dao.impl,me.longgen.web.base.business.service.impl" />
+	
 	<import resource="spring-datasource.xml" />
 </beans>
