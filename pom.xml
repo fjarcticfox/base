@@ -12,4 +12,40 @@
 		<!-- 使用 utf-8 编码 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<!-- 指定 Maven 仓库 -->
+	<repositories>
+		<!-- oschina 的 maven 仓库 -->
+		<repository>
+			<id>oschinaRepository</id>
+			<name>local private nexus</name>
+			<url>http://maven.oschina.net/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<!-- 官方 maven 仓库 -->
+		<!-- <repository> <id>maven</id> <name>Maven Repository Switchboard</name> <layout>default</layout><url>http://repo1.maven.org/maven2</url> 
+			<snapshots> <enabled>true</enabled> </snapshots> </repository> -->
+	</repositories>
+
+	<!-- 指定 maven plugin 仓库 -->
+	<pluginRepositories>
+		<!-- oschina 的 maven plugin 仓库 -->
+		<pluginRepository>
+			<id>oschinaPluginRepository</id>
+			<name>local private nexus</name>
+			<url>http://maven.oschina.net/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
