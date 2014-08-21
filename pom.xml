@@ -9,6 +9,8 @@
 	<description>基础框架</description>
 
 	<properties>
+		<!-- Java 版本 -->
+		<java-version>1.7</java-version>
 		<!-- 使用 utf-8 编码 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
