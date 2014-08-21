@@ -15,6 +15,12 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- Spring 版本 -->
 		<org.springframework-version>3.2.10.RELEASE</org.springframework-version>
+		<!-- PostgreSQL 驱动版本 -->
+		<org.postgresql-version>9.3-1102-jdbc41</org.postgresql-version>
+		<!-- Druid 版本 -->
+		<com.alibaba.druid-version>1.0.7</com.alibaba.druid-version>
+		<!-- Aspectj aspectjweaver 版本 -->
+		<org.aspectj.aspectjweaver-version>1.7.4</org.aspectj.aspectjweaver-version>
 	</properties>
 
 	<!-- 指定 Maven 仓库 -->
@@ -71,6 +77,25 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
+		</dependency>
+
+		<!-- PostgreSQL 数据库驱动 -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${org.postgresql-version}</version>
+		</dependency>
+
+		<!-- Druid 数据源 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${com.alibaba.druid-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${org.aspectj.aspectjweaver-version}</version>
 		</dependency>
 	</dependencies>
 </project>
