@@ -9,6 +9,12 @@
 	<!-- 描述信息 -->
 	<description>基础框架</description>
 
+	<!-- 配置静态资源直接用 Tomcat 等应用服务器默认的 Servlet 处理（ Spring 3.0.4 以后版本提供了 mvc:resources，可以用于处理静态资源） -->
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>default</servlet-name> -->
+	<!-- <url-pattern>*.css</url-pattern> -->
+	<!-- </servlet-mapping> -->
+
 	<!-- contextConfigLocation 缺省配置，则默认加载 /WEB-INF/applicationContext.xml -->
 	<!-- 定义 Spring 的 Root 容器，用于配置所有的 Servlets 以及 Filters，多个配置文件用逗号隔开 -->
 	<context-param>
@@ -41,6 +47,7 @@
 		<async-supported>true</async-supported>
 	</servlet>
 	<servlet-mapping>
+		<!-- 对 / 下的资源访问请求进行处理 -->
 		<servlet-name>mvcServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
