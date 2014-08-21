@@ -22,6 +22,9 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+	<!-- 根目录默认跳转 -->
+	<mvc:view-controller path="/" view-name="index" />
+
 	<!-- 开启自动扫描 Controller -->
 	<context:component-scan base-package="me.longgen.web.base.controller" />
 </beans>
