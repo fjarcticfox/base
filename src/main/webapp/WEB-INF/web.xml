@@ -1,0 +1,25 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0" metadata-complete="false">
+	<!-- web.xml 文件 xsd 文件必须指定版本，当前使用 3.0 版本 -->
+	<!-- Web 容器中，各元素加载顺序：context-param -> listener -> filter -> servlet；而同类型之间的实际调用顺序是由对应的 mapping 的顺序决定的 -->
+
+	<!-- Web 应用名称 -->
+	<display-name>base</display-name>
+	<!-- 描述信息 -->
+	<description>基础框架</description>
+
+	<!-- contextConfigLocation 缺省配置，则默认加载 /WEB-INF/applicationContext.xml -->
+	<!-- 定义 Spring 的 Root 容器，用于配置所有的 Servlets 以及 Filters，多个配置文件用逗号隔开 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:spring/spring-context.xml
+		</param-value>
+	</context-param>
+	<!-- Listener 创建 Spring 容器，加载 contextConfigLocation 中的配置文件 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+</web-app>
